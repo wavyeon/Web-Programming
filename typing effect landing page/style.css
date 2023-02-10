@@ -1,0 +1,57 @@
+/* 전체 선택 */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* 태그 선택 */
+body{
+    background-color: darkslateblue;
+}
+
+/* 클래스 선택 */
+.wrap{
+    /* 페이지 중앙 정렬 */
+    position: absolute;
+    top:50%;
+    left:50%;
+    left:50%;
+    transform: translate(-50%, -50);
+    color: white;
+    text-align: center;
+}
+
+.material-icons{
+    font-size: 10rem;
+}
+
+.lg-text{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.sm-text{
+    font-size: 1.5rem;
+}
+
+/* id 선택 */
+#dynamic{
+    position: relative;
+    /* p 태그의 글자의 길이에 따라 유동적으로 따라가도록 */
+    display: inline-block;
+}
+
+/* dynamic 이라는 id 값을 가진 요소에 after 라는 가상 요소 생성 */
+/* 태그가 끝나기 직전에 가상 요소가 생김 */
+#dynamic::after{
+    content:"";
+    display:block;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+}
